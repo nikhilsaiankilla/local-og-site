@@ -1,0 +1,36 @@
+:root { --bg:#000; --fg:#ededed; --muted:#9a9a9a; --dim:#6b6b6b; --line:#262626; --card:#0a0a0a; }
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body {
+  margin: 0; background: var(--bg); color: var(--fg);
+  font: 15px/1.7 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 680px; margin: 0 auto; padding: 56px 20px 40px; }
+h1 { font-size: 28px; letter-spacing: -0.02em; margin: 0 0 8px; line-height: 1.25; }
+h2 { font-size: 15px; margin: 40px 0 10px; text-transform: lowercase; color: var(--fg); }
+h2::before { content: "# "; color: var(--dim); }
+p, li { color: var(--muted); margin: 0 0 10px; }
+ul { padding-left: 20px; margin: 0 0 10px; }
+li { margin: 6px 0; }
+strong { color: var(--fg); font-weight: 600; }
+a { color: var(--fg); text-underline-offset: 3px; text-decoration-color: var(--dim); }
+a:hover { text-decoration-color: var(--fg); }
+code { background: #151515; border: 1px solid var(--line); padding: 1px 6px; border-radius: 6px; font-size: 13px; color: var(--fg); }
+nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 56px; font-size: 14px; }
+nav .brand { color: var(--fg); text-decoration: none; font-weight: 700; }
+nav .links { display: flex; gap: 18px; }
+nav .links a { color: var(--muted); text-decoration: none; }
+nav .links a:hover { color: var(--fg); }
+.lead { font-size: 16px; color: var(--muted); margin: 0 0 24px; }
+.btn { display: inline-block; background: #fff; color: #000; padding: 9px 16px; border-radius: 10px; font-weight: 600; text-decoration: none; font-size: 14px; }
+.btn:hover { background: #e5e5e5; }
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line); margin-left: 8px; }
+.btn.ghost:hover { background: #111; }
+.box { border: 1px solid var(--line); background: var(--card); border-radius: 12px; padding: 14px 16px; margin: 18px 0; }
+.box p { margin: 0; color: var(--fg); }
+.meta { color: var(--dim); font-size: 13px; }
+footer { max-width: 680px; margin: 0 auto; padding: 24px 20px 56px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 18px; }
+footer a { color: var(--dim); }
+footer a:hover { color: var(--fg); }
+@media (max-width: 480px) { main { padding-top: 32px; } nav { margin-bottom: 36px; } .btn.ghost { margin: 8px 0 0; } }
